@@ -11,6 +11,12 @@ final class ShirubeTests: XCTestCase {
         XCTAssertEqual(HiraganaLessons.all.first?.exemplarAssetName, "hiragana_a")
     }
 
+    func testPresetPracticePhrasesProvideManyUniquePhrases() {
+        XCTAssertGreaterThanOrEqual(PresetPracticePhrases.all.count, 50)
+        XCTAssertEqual(Set(PresetPracticePhrases.all).count, PresetPracticePhrases.all.count)
+        XCTAssertTrue(PresetPracticePhrases.all.contains("お世話になっております"))
+    }
+
     func testLessonRepositoryReturnsNextLesson() {
         let repository = LessonRepository()
 

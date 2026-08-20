@@ -9,6 +9,17 @@ struct TextPracticeMenuView: View {
     var body: some View {
         NavigationStack {
             Form {
+                Section("定型文") {
+                    NavigationLink {
+                        PresetTextPracticeListView()
+                    } label: {
+                        Label("定型文から選ぶ", systemImage: "text.book.closed")
+                    }
+                    Text("日常・仕事・手紙・宛名など、\(PresetPracticePhrases.all.count)文を用意しています。")
+                        .font(.footnote)
+                        .foregroundStyle(.secondary)
+                }
+
                 Section("よく書く言葉") {
                     TextField("例：山田 花子", text: $name)
                         .textInputAutocapitalization(.never)
