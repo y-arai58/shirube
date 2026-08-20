@@ -1,14 +1,20 @@
 import PencilKit
 import SwiftData
 import XCTest
-@testable import Penji
+@testable import Shirube
 
-final class PenjiTests: XCTestCase {
+final class ShirubeTests: XCTestCase {
     func testHiraganaLessonsContain46OrderedExemplars() {
         XCTAssertEqual(HiraganaLessons.all.count, 46)
         XCTAssertEqual(HiraganaLessons.all.first?.character, "あ")
         XCTAssertEqual(HiraganaLessons.all.last?.character, "ん")
         XCTAssertEqual(HiraganaLessons.all.first?.exemplarAssetName, "hiragana_a")
+    }
+
+    func testPresetPracticePhrasesProvideManyUniquePhrases() {
+        XCTAssertGreaterThanOrEqual(PresetPracticePhrases.all.count, 50)
+        XCTAssertEqual(Set(PresetPracticePhrases.all).count, PresetPracticePhrases.all.count)
+        XCTAssertTrue(PresetPracticePhrases.all.contains("お世話になっております"))
     }
 
     func testLessonRepositoryReturnsNextLesson() {

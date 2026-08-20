@@ -1,6 +1,6 @@
 import XCTest
 
-final class PenjiUITests: XCTestCase {
+final class ShirubeUITests: XCTestCase {
     func testCanStartPracticeFromCharacterSelection() {
         let app = XCUIApplication()
         app.launch()
