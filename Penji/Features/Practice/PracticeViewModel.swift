@@ -15,4 +15,8 @@ final class PracticeViewModel {
     }
 
     var hasDrawing: Bool { !drawing.strokes.isEmpty }
+
+    func save(using repository: PracticeRepositoryProtocol) throws -> PracticeRecord {
+        try repository.save(character: lesson.character, drawing: drawing, mode: mode)
+    }
 }

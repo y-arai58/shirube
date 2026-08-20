@@ -5,7 +5,7 @@ struct PracticeRecordCard: View {
     let record: PracticeRecord
     var showsDate = false
 
-    private var drawing: PKDrawing? { try? PKDrawing(data: record.drawingData) }
+    private var drawing: PKDrawing? { try? PKDrawing(persistenceData: record.drawingData) }
 
     var body: some View {
         HStack(spacing: 12) {
@@ -27,7 +27,7 @@ struct PracticeRecordCard: View {
                 Text(record.practiceMode.title)
                     .font(.subheadline)
                     .foregroundStyle(.secondary)
-                Text(record.createdAt.formatted(date: showsDate ? .abbreviated : .omitted, time: .shortened))
+                Text(showsDate ? record.createdAt.penjiShortTimestamp : record.createdAt.formatted(date: .omitted, time: .shortened))
                     .font(.caption)
                     .foregroundStyle(.secondary)
             }

@@ -1,6 +1,6 @@
 import Foundation
 
-struct HomeViewModel {
+struct CharacterSelectionViewModel {
     let lessons: [CharacterLesson]
     let practicedCharacters: Set<String>
 
@@ -9,12 +9,7 @@ struct HomeViewModel {
         self.practicedCharacters = practicedCharacters
     }
 
-    var recommendedLesson: CharacterLesson? {
-        lessons.first { !practicedCharacters.contains($0.character) }
-    }
-
-    var progress: Double {
-        guard !lessons.isEmpty else { return 0 }
-        return Double(practicedCharacters.count) / Double(lessons.count)
+    func isPracticed(_ lesson: CharacterLesson) -> Bool {
+        practicedCharacters.contains(lesson.character)
     }
 }

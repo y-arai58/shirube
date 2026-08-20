@@ -17,7 +17,7 @@ final class PracticeRepository: PracticeRepositoryProtocol {
     }
 
     func save(character: String, drawing: PKDrawing, mode: PracticeMode) throws -> PracticeRecord {
-        let record = PracticeRecord(character: character, drawingData: drawing.dataRepresentation(), practiceMode: mode)
+        let record = PracticeRecord(character: character, drawingData: drawing.persistenceData, practiceMode: mode)
         modelContext.insert(record)
         try modelContext.save()
         return record

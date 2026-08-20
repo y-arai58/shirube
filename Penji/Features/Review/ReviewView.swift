@@ -4,11 +4,13 @@ import SwiftUI
 struct ReviewView: View {
     let lesson: CharacterLesson
     let record: PracticeRecord
-    @State private var comparisonMode: ComparisonMode = .sideBySide
-    @State private var exemplarOpacity = 0.3
 
-    private var drawing: PKDrawing? {
-        try? PKDrawing(data: record.drawingData)
+    @State private var viewModel: ReviewViewModel
+
+    init(lesson: CharacterLesson, record: PracticeRecord) {
+        self.lesson = lesson
+        self.record = record
+        _viewModel = State(initialValue: ReviewViewModel(lesson: lesson, record: record))
     }
 
     var body: some View {
@@ -22,21 +24,21 @@ struct ReviewView: View {
                 Text("「\(lesson.character)」の練習を記録しました。")
                     .foregroundStyle(.secondary)
 
-                Picker("比較方法", selection: $comparisonMode) {
+                Picker("比較方法", selection: $viewModel.comparisonMode) {
                     ForEach(ComparisonMode.allCases) { mode in Text(mode.title).tag(mode) }
                 }
                 .pickerStyle(.segmented)
 
-                if let drawing {
-                    DrawingComparisonView(lesson: lesson, drawing: drawing, mode: comparisonMode, exemplarOpacity: exemplarOpacity)
+                if let drawing = viewModel.drawing {
+                    DrawingComparisonView(lesson: lesson, drawing: drawing, mode: viewModel.comparisonMode, exemplarOpacity: viewModel.exemplarOpacity)
                 } else {
                     ContentUnavailableView("記録を読み込めません", systemImage: "exclamationmark.triangle")
                 }
 
-                if comparisonMode == .overlay {
+                if viewModel.comparisonMode == .overlay {
                     HStack {
                         Text("お手本の濃さ")
-                        Slider(value: $exemplarOpacity, in: 0.05...0.7)
+                        Slider(value: $viewModel.exemplarOpacity, in: 0.05...0.7)
                     }
                 }
 

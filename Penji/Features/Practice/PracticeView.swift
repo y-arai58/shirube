@@ -55,8 +55,8 @@ struct PracticeView: View {
         VStack(alignment: .leading, spacing: 12) {
             Text("お手本")
                 .font(.headline)
-            Text(lesson.character)
-                .font(.system(size: 220, weight: .regular, design: .rounded))
+            ExemplarImageView(lesson: lesson)
+                .padding(18)
                 .frame(maxWidth: .infinity, minHeight: 280)
                 .background(.background, in: RoundedRectangle(cornerRadius: 20))
             tips
@@ -118,11 +118,8 @@ struct PracticeView: View {
                 .accessibilityLabel("キャンバスをクリア")
 
                 Spacer()
-                Button(action: savePractice) {
-                    Label("完了", systemImage: "checkmark")
-                        .frame(minWidth: 90)
-                }
-                .buttonStyle(.borderedProminent)
+                PrimaryButton("完了", systemImage: "checkmark", action: savePractice)
+                    .frame(minWidth: 110)
                 .disabled(!viewModel.hasDrawing)
             }
         }
@@ -152,11 +149,7 @@ struct PracticeView: View {
             return
         }
         do {
-            let record = try PracticeRepository(modelContext: modelContext).save(
-                character: lesson.character,
-                drawing: viewModel.drawing,
-                mode: viewModel.mode
-            )
+            let record = try viewModel.save(using: PracticeRepository(modelContext: modelContext))
             savedRecord = record
         } catch {
             viewModel.errorMessage = "練習記録を保存できませんでした。もう一度お試しください。"

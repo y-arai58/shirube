@@ -34,8 +34,8 @@ struct DrawingComparisonView: View {
     }
 
     private var exemplar: some View {
-        Text(lesson.character)
-            .font(ExemplarFont.font(size: 150))
+        ExemplarImageView(lesson: lesson)
+            .padding(24)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 

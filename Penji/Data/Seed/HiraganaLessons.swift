@@ -1,19 +1,25 @@
 import Foundation
 
 enum HiraganaLessons {
-    static let all: [CharacterLesson] = [
-        "あ", "い", "う", "え", "お", "か", "き", "く", "け", "こ",
-        "さ", "し", "す", "せ", "そ", "た", "ち", "つ", "て", "と",
-        "な", "に", "ぬ", "ね", "の", "は", "ひ", "ふ", "へ", "ほ",
-        "ま", "み", "む", "め", "も", "や", "ゆ", "よ", "ら", "り",
-        "る", "れ", "ろ", "わ", "を", "ん"
-    ].enumerated().map { index, character in
+    private static let characters: [(roman: String, character: String)] = [
+        ("a", "あ"), ("i", "い"), ("u", "う"), ("e", "え"), ("o", "お"),
+        ("ka", "か"), ("ki", "き"), ("ku", "く"), ("ke", "け"), ("ko", "こ"),
+        ("sa", "さ"), ("shi", "し"), ("su", "す"), ("se", "せ"), ("so", "そ"),
+        ("ta", "た"), ("chi", "ち"), ("tsu", "つ"), ("te", "て"), ("to", "と"),
+        ("na", "な"), ("ni", "に"), ("nu", "ぬ"), ("ne", "ね"), ("no", "の"),
+        ("ha", "は"), ("hi", "ひ"), ("fu", "ふ"), ("he", "へ"), ("ho", "ほ"),
+        ("ma", "ま"), ("mi", "み"), ("mu", "む"), ("me", "め"), ("mo", "も"),
+        ("ya", "や"), ("yu", "ゆ"), ("yo", "よ"), ("ra", "ら"), ("ri", "り"),
+        ("ru", "る"), ("re", "れ"), ("ro", "ろ"), ("wa", "わ"), ("wo", "を"), ("n", "ん")
+    ]
+
+    static let all: [CharacterLesson] = characters.enumerated().map { index, item in
         CharacterLesson(
             id: "hiragana-\(index)",
-            character: character,
+            character: item.character,
             order: index,
-            tips: defaultTips(for: character),
-            exemplarAssetName: "hiragana_\(index)"
+            tips: defaultTips(for: item.character),
+            exemplarAssetName: "hiragana_\(item.roman)"
         )
     }
 

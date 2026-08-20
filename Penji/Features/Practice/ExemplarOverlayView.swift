@@ -5,11 +5,8 @@ struct ExemplarOverlayView: View {
     let opacity: Double
 
     var body: some View {
-        Text(lesson.character)
-            .font(ExemplarFont.font(size: 280))
-            .foregroundStyle(.primary)
+        ExemplarImageView(lesson: lesson)
             .opacity(opacity)
-            .minimumScaleFactor(0.2)
-            .accessibilityLabel("お手本: \(lesson.character)")
+            .padding(28)
     }
 }

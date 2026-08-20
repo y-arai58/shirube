@@ -3,11 +3,8 @@ import SwiftUI
 
 struct HomeView: View {
     @Query(sort: \PracticeRecord.createdAt, order: .reverse) private var records: [PracticeRecord]
-    private let lessonRepository = LessonRepository()
-
     var body: some View {
         let viewModel = HomeViewModel(
-            lessons: lessonRepository.allLessons(),
             practicedCharacters: Set(records.map(\.character))
         )
 
