@@ -1,10 +1,10 @@
-# Penji
+# 導（shirube）
 
 iPad と Apple Pencil 向けのペン字練習アプリです。SwiftUI、PencilKit、SwiftData を使用し、ひらがな46文字の練習、記録、比較、履歴確認を行えます。
 
 ## 開き方
 
-Xcode で `Penji.xcodeproj` を開き、iPad を接続するか iPad シミュレータを選択して実行します。対応OSは iOS 17 以降です。
+Xcode で `Shirube.xcodeproj` を開き、iPad を接続するか iPad シミュレータを選択して実行します。対応OSは iOS 17 以降です。
 
 ## 実装済みの内容
 

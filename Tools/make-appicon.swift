@@ -1,5 +1,5 @@
 // アプリアイコンを生成する。リポジトリのルートから実行する:
-//   swift Tools/make-appicon.swift Penji/Assets.xcassets/AppIcon.appiconset
+//   swift Tools/make-appicon.swift Shirube/Assets.xcassets/AppIcon.appiconset
 // 見本と同じ Klee One SemiBold で製品名の「導」を描き、light / dark / tinted の3種を書き出す。
 // 第2引数で字を差し替えられる（例: swift Tools/make-appicon.swift <out> し）。
 
@@ -10,7 +10,7 @@ import ImageIO
 import UniformTypeIdentifiers
 
 let size: CGFloat = 1024
-let fontURL = URL(fileURLWithPath: "Penji/Resources/Fonts/KleeOne-SemiBold.ttf")
+let fontURL = URL(fileURLWithPath: "Shirube/Resources/Fonts/KleeOne-SemiBold.ttf")
 guard CTFontManagerRegisterFontsForURL(fontURL as CFURL, .process, nil) else {
     fatalError("font register failed")
 }

@@ -2,7 +2,7 @@ import SwiftUI
 import SwiftData
 
 @main
-struct PenjiApp: App {
+struct ShirubeApp: App {
     var body: some Scene {
         WindowGroup {
             AppRootView()

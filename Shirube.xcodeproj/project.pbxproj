@@ -7,26 +7,26 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		A10000000000000000000001 /* Penji.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Penji.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A10000000000000000000016 /* PenjiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PenjiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A10000000000000000000017 /* PenjiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PenjiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A10000000000000000000001 /* Shirube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shirube.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A10000000000000000000016 /* ShirubeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShirubeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A10000000000000000000017 /* ShirubeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShirubeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A10000000000000000000018 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = System/Library/Frameworks/XCTest.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		A10000000000000000000002 /* Penji */ = {
+		A10000000000000000000002 /* Shirube */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Penji;
+			path = Shirube;
 			sourceTree = "<group>";
 		};
-		A10000000000000000000019 /* PenjiTests */ = {
+		A10000000000000000000019 /* ShirubeTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = PenjiTests;
+			path = ShirubeTests;
 			sourceTree = "<group>";
 		};
-		A10000000000000000000020 /* PenjiUITests */ = {
+		A10000000000000000000020 /* ShirubeUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = PenjiUITests;
+			path = ShirubeUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -66,9 +66,9 @@
 		A10000000000000000000004 = {
 			isa = PBXGroup;
 			children = (
-				A10000000000000000000002 /* Penji */,
-				A10000000000000000000019 /* PenjiTests */,
-				A10000000000000000000020 /* PenjiUITests */,
+				A10000000000000000000002 /* Shirube */,
+				A10000000000000000000019 /* ShirubeTests */,
+				A10000000000000000000020 /* ShirubeUITests */,
 				A10000000000000000000005 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -76,9 +76,9 @@
 		A10000000000000000000005 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A10000000000000000000001 /* Penji.app */,
-				A10000000000000000000016 /* PenjiTests.xctest */,
-				A10000000000000000000017 /* PenjiUITests.xctest */,
+				A10000000000000000000001 /* Shirube.app */,
+				A10000000000000000000016 /* ShirubeTests.xctest */,
+				A10000000000000000000017 /* ShirubeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -86,9 +86,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A10000000000000000000006 /* Penji */ = {
+		A10000000000000000000006 /* Shirube */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A10000000000000000000007 /* Build configuration list for PBXNativeTarget "Penji" */;
+			buildConfigurationList = A10000000000000000000007 /* Build configuration list for PBXNativeTarget "Shirube" */;
 			buildPhases = (
 				A10000000000000000000008 /* Sources */,
 				A10000000000000000000003 /* Frameworks */,
@@ -99,18 +99,18 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				A10000000000000000000002 /* Penji */,
+				A10000000000000000000002 /* Shirube */,
 			);
-			name = Penji;
+			name = Shirube;
 			packageProductDependencies = (
 			);
-			productName = Penji;
-			productReference = A10000000000000000000001 /* Penji.app */;
+			productName = Shirube;
+			productReference = A10000000000000000000001 /* Shirube.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A10000000000000000000025 /* PenjiTests */ = {
+		A10000000000000000000025 /* ShirubeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A10000000000000000000026 /* Build configuration list for PBXNativeTarget "PenjiTests" */;
+			buildConfigurationList = A10000000000000000000026 /* Build configuration list for PBXNativeTarget "ShirubeTests" */;
 			buildPhases = (
 				A10000000000000000000027 /* Sources */,
 				A10000000000000000000023 /* Frameworks */,
@@ -121,18 +121,18 @@
 				A10000000000000000000028 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				A10000000000000000000019 /* PenjiTests */,
+				A10000000000000000000019 /* ShirubeTests */,
 			);
-			name = PenjiTests;
+			name = ShirubeTests;
 			packageProductDependencies = (
 			);
-			productName = PenjiTests;
-			productReference = A10000000000000000000016 /* PenjiTests.xctest */;
+			productName = ShirubeTests;
+			productReference = A10000000000000000000016 /* ShirubeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		A10000000000000000000029 /* PenjiUITests */ = {
+		A10000000000000000000029 /* ShirubeUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A10000000000000000000030 /* Build configuration list for PBXNativeTarget "PenjiUITests" */;
+			buildConfigurationList = A10000000000000000000030 /* Build configuration list for PBXNativeTarget "ShirubeUITests" */;
 			buildPhases = (
 				A10000000000000000000031 /* Sources */,
 				A10000000000000000000024 /* Frameworks */,
@@ -143,13 +143,13 @@
 				A10000000000000000000032 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				A10000000000000000000020 /* PenjiUITests */,
+				A10000000000000000000020 /* ShirubeUITests */,
 			);
-			name = PenjiUITests;
+			name = ShirubeUITests;
 			packageProductDependencies = (
 			);
-			productName = PenjiUITests;
-			productReference = A10000000000000000000017 /* PenjiUITests.xctest */;
+			productName = ShirubeUITests;
+			productReference = A10000000000000000000017 /* ShirubeUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -160,26 +160,26 @@
 			containerPortal = A10000000000000000000010 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = A10000000000000000000006;
-			remoteInfo = Penji;
+			remoteInfo = Shirube;
 		};
 		A10000000000000000000034 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A10000000000000000000010 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = A10000000000000000000006;
-			remoteInfo = Penji;
+			remoteInfo = Shirube;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXTargetDependency section */
 		A10000000000000000000028 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A10000000000000000000006 /* Penji */;
+			target = A10000000000000000000006 /* Shirube */;
 			targetProxy = A10000000000000000000033 /* PBXContainerItemProxy */;
 		};
 		A10000000000000000000032 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A10000000000000000000006 /* Penji */;
+			target = A10000000000000000000006 /* Shirube */;
 			targetProxy = A10000000000000000000034 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -204,7 +204,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A10000000000000000000011 /* Build configuration list for PBXProject "Penji" */;
+			buildConfigurationList = A10000000000000000000011 /* Build configuration list for PBXProject "Shirube" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -219,9 +219,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A10000000000000000000006 /* Penji */,
-				A10000000000000000000025 /* PenjiTests */,
-				A10000000000000000000029 /* PenjiUITests */,
+				A10000000000000000000006 /* Shirube */,
+				A10000000000000000000025 /* ShirubeTests */,
+				A10000000000000000000029 /* ShirubeUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -314,7 +314,7 @@
 				INFOPLIST_FILE = Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.Penji;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.Shirube;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -334,7 +334,7 @@
 				INFOPLIST_FILE = Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.Penji;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.Shirube;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -349,11 +349,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.PenjiTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.ShirubeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 2;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Penji.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Penji";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Shirube.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Shirube";
 			};
 			name = Debug;
 		};
@@ -363,11 +363,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.PenjiTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.ShirubeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 2;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Penji.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Penji";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Shirube.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Shirube";
 			};
 			name = Release;
 		};
@@ -376,11 +376,11 @@
 			buildSettings = {
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.PenjiUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.ShirubeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 2;
-				TEST_TARGET_NAME = Penji;
+				TEST_TARGET_NAME = Shirube;
 			};
 			name = Debug;
 		};
@@ -389,18 +389,18 @@
 			buildSettings = {
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.PenjiUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.ShirubeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 2;
-				TEST_TARGET_NAME = Penji;
+				TEST_TARGET_NAME = Shirube;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A10000000000000000000007 /* Build configuration list for PBXNativeTarget "Penji" */ = {
+		A10000000000000000000007 /* Build configuration list for PBXNativeTarget "Shirube" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A10000000000000000000014 /* Debug */,
@@ -409,7 +409,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A10000000000000000000011 /* Build configuration list for PBXProject "Penji" */ = {
+		A10000000000000000000011 /* Build configuration list for PBXProject "Shirube" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A10000000000000000000012 /* Debug */,
@@ -418,7 +418,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A10000000000000000000026 /* Build configuration list for PBXNativeTarget "PenjiTests" */ = {
+		A10000000000000000000026 /* Build configuration list for PBXNativeTarget "ShirubeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A10000000000000000000035 /* Debug */,
@@ -427,7 +427,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A10000000000000000000030 /* Build configuration list for PBXNativeTarget "PenjiUITests" */ = {
+		A10000000000000000000030 /* Build configuration list for PBXNativeTarget "ShirubeUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A10000000000000000000037 /* Debug */,
