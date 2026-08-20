@@ -31,6 +31,15 @@ final class PenjiTests: XCTestCase {
         XCTAssertFalse(viewModel.isPracticed(HiraganaLessons.all[1]))
     }
 
+    func testPracticeViewModelSavesThePresentedCharacter() throws {
+        let repository = CapturingPracticeRepository()
+        let viewModel = PracticeViewModel()
+
+        _ = try viewModel.save(using: repository, character: "あ")
+
+        XCTAssertEqual(repository.savedCharacter, "あ")
+    }
+
     @MainActor
     func testPracticeRepositorySavesAndFetchesDrawing() throws {
         let container = try ModelContainer(
@@ -48,4 +57,17 @@ final class PenjiTests: XCTestCase {
         XCTAssertEqual(records.first?.practiceMode, .trace)
         XCTAssertNoThrow(try PKDrawing(persistenceData: saved.drawingData))
     }
+}
+
+private final class CapturingPracticeRepository: PracticeRepositoryProtocol {
+    private(set) var savedCharacter: String?
+
+    func save(character: String, drawing: PKDrawing, mode: PracticeMode) throws -> PracticeRecord {
+        savedCharacter = character
+        return PracticeRecord(character: character, drawingData: drawing.persistenceData, practiceMode: mode)
+    }
+
+    func records(for character: String) throws -> [PracticeRecord] { [] }
+    func recentRecords(limit: Int) throws -> [PracticeRecord] { [] }
+    func practicedCharacters() throws -> Set<String> { [] }
 }

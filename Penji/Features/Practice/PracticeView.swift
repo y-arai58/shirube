@@ -13,7 +13,7 @@ struct PracticeView: View {
 
     init(lesson: CharacterLesson) {
         self.lesson = lesson
-        _viewModel = State(initialValue: PracticeViewModel(lesson: lesson))
+        _viewModel = State(initialValue: PracticeViewModel())
     }
 
     var body: some View {
@@ -149,7 +149,10 @@ struct PracticeView: View {
             return
         }
         do {
-            let record = try viewModel.save(using: PracticeRepository(modelContext: modelContext))
+            let record = try viewModel.save(
+                using: PracticeRepository(modelContext: modelContext),
+                character: lesson.character
+            )
             savedRecord = record
         } catch {
             viewModel.errorMessage = "練習記録を保存できませんでした。もう一度お試しください。"

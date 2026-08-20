@@ -10,7 +10,11 @@ struct ReviewView: View {
     init(lesson: CharacterLesson, record: PracticeRecord) {
         self.lesson = lesson
         self.record = record
-        _viewModel = State(initialValue: ReviewViewModel(lesson: lesson, record: record))
+        _viewModel = State(initialValue: ReviewViewModel(record: record))
+    }
+
+    private var practicedLesson: CharacterLesson {
+        LessonRepository().lesson(for: record.character) ?? lesson
     }
 
     var body: some View {
@@ -21,7 +25,7 @@ struct ReviewView: View {
                     .foregroundStyle(.green)
                 Text("おつかれさまでした")
                     .font(.title.bold())
-                Text("「\(lesson.character)」の練習を記録しました。")
+                Text("「\(record.character)」の練習を記録しました。")
                     .foregroundStyle(.secondary)
 
                 Picker("比較方法", selection: $viewModel.comparisonMode) {
@@ -30,7 +34,7 @@ struct ReviewView: View {
                 .pickerStyle(.segmented)
 
                 if let drawing = viewModel.drawing {
-                    DrawingComparisonView(lesson: lesson, drawing: drawing, mode: viewModel.comparisonMode, exemplarOpacity: viewModel.exemplarOpacity)
+                    DrawingComparisonView(lesson: practicedLesson, drawing: drawing, mode: viewModel.comparisonMode, exemplarOpacity: viewModel.exemplarOpacity)
                 } else {
                     ContentUnavailableView("記録を読み込めません", systemImage: "exclamationmark.triangle")
                 }
@@ -43,9 +47,9 @@ struct ReviewView: View {
                 }
 
                 HStack {
-                    NavigationLink("もう一度練習") { PracticeView(lesson: lesson) }
+                    NavigationLink("もう一度練習") { PracticeView(lesson: practicedLesson) }
                         .buttonStyle(.bordered)
-                    if let next = LessonRepository().nextLesson(after: lesson) {
+                    if let next = LessonRepository().nextLesson(after: practicedLesson) {
                         NavigationLink("次の文字へ") { PracticeView(lesson: next) }
                             .buttonStyle(.borderedProminent)
                     }
